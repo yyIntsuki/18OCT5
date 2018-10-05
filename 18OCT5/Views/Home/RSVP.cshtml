@@ -1,0 +1,19 @@
+﻿@model _18OCT5.Models.GuestResponse
+@{
+    ViewBag.Title = "RSVP";
+}
+
+    <div> 
+        <h2>Registration:</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary();
+
+            <p>Your name: @Html.TextBox("Name")</p>
+            <p>Your email: @Html.TextBox("Email")</p>
+            <p>Your phone: @Html.TextBox("Phone")</p>
+
+            <input type="submit" value="RSVP" />
+        }
+    </div>
+
